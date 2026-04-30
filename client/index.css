@@ -1,0 +1,153 @@
+@import "node_modules/normalize.css/normalize.css";
+@import "nav.css";
+@import "auth.css";
+@import "createPost.css";
+@import "posts.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* background color */
+  --bg: #121212;
+  --content-bg: #1c1c1c;
+  --input-bg: #121212;
+
+  --border: 1px solid #2a2a2a;
+
+  /* Buttons & Highlights */
+  --accent: lightskyblue;
+  --accent-hover: #b8d7a3;
+  --accent-color: #6b8f5a;
+
+  /* Text */
+  --primary-txt: #e0e0e0;
+  --secondary-txt: #b0b0c0;
+  --muted-text: #7a7a8c;
+  --link-color: #82aaff;
+  --link-hover: #a3caff;
+
+  /* Spacing */
+  --padding-small: 9px;
+  --padding-normal: 15px;
+  --padding-big: 40px;
+
+  --margin: 16px;
+  --radius-normal: 9px;
+  --radius-big: 20px;
+
+  --gap-small: 9px;
+  --gap: 15px;
+
+  /* font size */
+  --font-size-small: 0.8em;
+  --font-size-normal: 1em;
+  --font-size-large: 1.2em;
+  --font-size-XL: 1.5em;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  font-size: var(--font-size-normal);
+  letter-spacing: 0.019em;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.61em;
+  color: var(--primary-txt);
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 1200px;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+
+button {
+  padding: var(--padding-small);
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  border: var(--border);
+  border-radius: var(--radius-normal);
+  font-size: var(--font-size-large);
+  background-color: var(--accent);
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+.img {
+  object-fit: cover;
+  border: var(--border);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  cursor: hover;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+input,
+textarea {
+  background-color: var(--input-bg);
+  border: var(--border);
+  border-radius: var(--radius-normal);
+  padding: var(--padding-normal);
+  outline: none;
+  color: var(--primary-txt);
+}
+
+#auth-error {
+  background-color: orangered;
+  padding: var(--padding-normal);
+  border-radius: var(--radius-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.default-pfp {
+  width: 40px;
+  height: 40px;
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+label {
+  font-weight: bold;
+}
+
+time {
+  color: var(--muted-text);
+}
+
+dialog {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
